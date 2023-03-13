@@ -19,13 +19,7 @@
     <textarea id="text-to-speech"></textarea>
     <br />
     <button onclick="speak()">Speak</button>
+    <script src="script.js" defer></script>
 </body>
-<script>
-    function speak() {
-        const text = document.getElementById('text-to-speech').value;
-        const utterance = new SpeechSynthesisUtterance(text);
-        window.speechSynthesis.speak(utterance);
-    }
-</script>
 
 </html>
