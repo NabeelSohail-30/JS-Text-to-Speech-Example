@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Web Speech API Demo</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Web Speech API Demo</h1>
+    <h2>Text-to-Speech</h2>
+    <p>Enter the text you want to be spoken:</p>
+    <textarea id="text-to-speech"></textarea>
+    <br />
+    <button onclick="speak()">Speak</button>
+</body>
+<script>
+    function speak() {
+        const text = document.getElementById('text-to-speech').value;
+        const utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
+    }
+</script>
+
+</html>
